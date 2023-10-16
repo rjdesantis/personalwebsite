@@ -67,3 +67,27 @@
     font-weight: 100;
     line-height: 25px;
 }
+.content a{
+    all: revert;
+    color: #fff;
+}
+.content1 {
+   display: flex;
+   margin: 20px;
+   padding: 10px;
+}
+.content1 p {
+    padding: 20px;
+    margin: 20px;
+    color: white;
+    font-size: large;
+    line-height: 30px;
+}
+.content1 a{
+    margin-top: 200px;
+    color: white;
+}
+h1{
+    color: #fff;
+    text-align: center;
+}

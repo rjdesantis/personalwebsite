@@ -1,6 +1,10 @@
 from flask import Flask, render_template
+import os
 
 app = Flask(__name__)
+
+picFolder = os.path.join('static','css', 'pics')
+app.config['UPLOAD_FOLDER'] = picFolder
 
 @app.route('/')
 def index():
@@ -8,11 +12,13 @@ def index():
 
 @app.route("/about")
 def about():
-    return render_template("about.html")
+    pic1 = os.path.join(app.config['UPLOAD_FOLDER'], 'IMG_0159.JPG')
+    return render_template("about.html", user_image = pic1)
 
 @app.route("/projects")
 def projects():
-    return render_template("projects.html")
+    pic2 = os.path.join(app.config['UPLOAD_FOLDER'], 'quickfoodspic.png')
+    return render_template("projects.html", user_image = pic2)
 
 
 if __name__ == '__main__':
